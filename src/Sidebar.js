@@ -18,7 +18,7 @@ function Sidebar() {
             <TwitterIcon className="sidebar__twitterIcon"/>
             
             
-            <SidebarOption active Icon={HomeIcon} text="Home" />
+            <SidebarOption  active Icon={HomeIcon} text="Home" />
             <SidebarOption Icon={PersonIcon} text="Profile" />
             <SidebarOption Icon={SearchIcon} text="Explore" />
             <SidebarOption Icon={NotificationsIcon} text="Notification" />
@@ -26,8 +26,12 @@ function Sidebar() {
             <SidebarOption Icon={BookmarkIcon} text="Bookmarks" />
             <SidebarOption Icon={ListIcon} text="Lists" />
             <SidebarOption Icon={MoreIcon} text="More" />
-            <Button variant= "outlined" className="sidebar__tweet" fullWidth>
-            Tweet
+            <Button type="button"
+                      onClick={(e) => {
+                       e.preventDefault();
+                  window.location.href='http://twitter.com';
+                       }}variant= "outlined" className="sidebar__tweet" fullWidth>
+                      Tweet
             </Button>
         </div>
     )
